@@ -4,12 +4,34 @@
   "description": "Schema for user documents in the Firestore users collection",
   "type": "object",
   "properties": {
-    "uid": { "type": "string" },
-    "email": { "type": "string", "format": "email" },
-    "display_name": { "type": "string" },
-    "photo_url": { "type": "string", "format": "uri" },
-    "birthdate": { "type": "string", "format": "date-time" },
-    "created_time": { "type": "string", "format": "date-time" }
+    "uid": {
+      "description": "Unique identifier for the user (Firebase Auth UID)",
+      "type": "string"
+    },
+    "email": {
+      "description": "User email address",
+      "type": "string",
+      "format": "email"
+    },
+    "display_name": {
+      "description": "User display name",
+      "type": "string"
+    },
+    "photo_url": {
+      "description": "Profile photo URL",
+      "type": "string",
+      "format": "uri"
+    },
+    "birthdate": {
+      "description": "User birthdate",
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_time": {
+      "description": "Timestamp when the user account was created",
+      "type": "string",
+      "format": "date-time"
+    }
   },
   "required": ["uid", "email", "created_time"]
 }
